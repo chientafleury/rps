@@ -1,16 +1,16 @@
 import random
 
-choices = ["gunting", "batu", "kertas"]
+choices = ["rock", "paper", "scissors"]
 computer = random.choice(choices)
-player = input("Pilih (gunting/batu/kertas): ").lower()
+player = input("Choose (rock/paper/scissors): ").lower()
 
-print(f"Komputer memilih: {computer}")
+print(f"Computer chooses: {computer}")
 
 if player == computer:
-    print("Seri!")
-elif (player == "batu" and computer == "gunting") or \
-     (player == "gunting" and computer == "kertas") or \
-     (player == "kertas" and computer == "batu"):
-    print("Kamu menang!")
+    print("Tie!")
+elif (player == "rock" and computer == "scissors") or \
+     (player == "scissors" and computer == "paper") or \
+     (player == "paper" and computer == "rock"):
+    print("You win!")
 else:
-    print("Komputer menang!")
+    print("Computer wins!")
